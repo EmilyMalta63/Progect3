@@ -1,0 +1,5 @@
+<form th:action="@{/notes}" th:object="${note}" method="post">
+    <!-- ... -->
+    <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
+    <div th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></div>
+</form>
